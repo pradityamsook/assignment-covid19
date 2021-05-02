@@ -14,4 +14,4 @@
 > npm start
 ```
 
-# See example [here][(https://pradityamsook.github.io/assignment-covid19/)
+# See example [here](https://pradityamsook.github.io/assignment-covid19/)
