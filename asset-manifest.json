@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/assignment-covid19/static/css/main.9aefebad.chunk.css",
+    "main.js": "/assignment-covid19/static/js/main.3144555b.chunk.js",
+    "main.js.map": "/assignment-covid19/static/js/main.3144555b.chunk.js.map",
+    "runtime-main.js": "/assignment-covid19/static/js/runtime-main.320ab667.js",
+    "runtime-main.js.map": "/assignment-covid19/static/js/runtime-main.320ab667.js.map",
+    "static/js/2.6e842252.chunk.js": "/assignment-covid19/static/js/2.6e842252.chunk.js",
+    "static/js/2.6e842252.chunk.js.map": "/assignment-covid19/static/js/2.6e842252.chunk.js.map",
+    "static/js/3.aace391f.chunk.js": "/assignment-covid19/static/js/3.aace391f.chunk.js",
+    "static/js/3.aace391f.chunk.js.map": "/assignment-covid19/static/js/3.aace391f.chunk.js.map",
+    "index.html": "/assignment-covid19/index.html",
+    "static/css/main.9aefebad.chunk.css.map": "/assignment-covid19/static/css/main.9aefebad.chunk.css.map",
+    "static/js/2.6e842252.chunk.js.LICENSE.txt": "/assignment-covid19/static/js/2.6e842252.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.320ab667.js",
+    "static/js/2.6e842252.chunk.js",
+    "static/css/main.9aefebad.chunk.css",
+    "static/js/main.3144555b.chunk.js"
+  ]
+}
