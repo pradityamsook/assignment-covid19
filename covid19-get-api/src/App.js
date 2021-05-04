@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 // import Covid19 from "./Covid19";
 
 // import css
@@ -60,8 +61,8 @@ class App extends React.Component {
     });
   }
 
-  componentDidMount() {
-    axios
+  async componentDidMount() {
+    await axios
       .get("https://api.covid19api.com/summary")
       .then((res) => {
         this.setState({
@@ -77,10 +78,8 @@ class App extends React.Component {
 
   render() {
     const { dataCovid, searchByCountry, isLoaded } = this.state; //extracter
-    // const sorting = dataCovid.sort((first, second) => {
-    //   const isSorted = (sortType === 'desc') ? 1 : -1;
-    //   return isSorted * first.dataCovid.dataCovid.TotalConfirmed.localCompare(second.dataCovid.dataCovid.TotalConfirmed);
-    // });
+    dataCovid.sort((a, b) => a.TotalConfirmed - b.TotalConfirmed);
+    dataCovid.reverse((a) => a.TotalConfirmed);
 
     if (!isLoaded) {
       return <div>waiting data...</div>;
@@ -88,6 +87,9 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <Helmet>
+          <title>Report COVID19</title>
+        </Helmet>
         <header>Report COVID-19</header>
         <div>Total country: {searchByCountry.length}</div>
         <input
@@ -113,7 +115,6 @@ class App extends React.Component {
                 <tr key={covid.ID}>
                   <td>{covid.Country}</td>
                   <td>{covid.TotalConfirmed}</td>
-                  {/* <td>{covid.NewDeaths > 0 ? <div style={{background: "#FF5835"}}>{covid.NewDeaths}</div>: 'No update'}</td> */}
                   <td>{covid.TotalDeaths}</td>
                   <td>{covid.TotalRecovered}</td>
                 </tr>
